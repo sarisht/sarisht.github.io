@@ -1,5 +1,6 @@
 ---
-title: Sarisht Wadhwa Homepage
+# Display name
+title: Sarisht Wadhwa
 
 # Full name (for SEO)
 first_name: Sarisht
@@ -108,7 +109,7 @@ skills:
 languages:
   - name: English
     percent: 100
-
+---
 
 ## About Me
 
