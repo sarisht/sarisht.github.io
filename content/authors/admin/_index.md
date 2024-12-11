@@ -51,7 +51,7 @@ education:
   - area: PhD Computer Science
     institution: Duke University
     date_start: 2021-07-01
-    date_end: Present
+    date_end: 2026-06-01
     summary: |
       PhD candidate in Computer Science at Duke University. Studying security of blockchains and cryptocurrency. Making DeFi fast and Efficient. Currently working with Ethereum Foundation on an Inclusion List Design - AUCIL and separately on analyzing Efficacy of Preconfs with Rohan Shrotium.
     # button:
