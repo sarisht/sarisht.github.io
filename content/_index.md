@@ -1,6 +1,6 @@
 ---
 # Leave the homepage title empty to use the site title
-title: ""
+title: "Sarisht Wadhwa"
 date: 2022-10-24
 type: landing
 
@@ -17,7 +17,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: uploads/resume.pdf
+        url: uploads/static/resume.pdf
     design:
       css_class: dark
       background:
