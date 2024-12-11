@@ -17,7 +17,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: PhD Candidate at Duke University
+role: PhD Candidate in Security of Blockchains
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -53,7 +53,7 @@ education:
     date_start: 2021-07-01
     date_end: 2026-06-01
     summary: |
-      PhD candidate in Computer Science at Duke University. Studying security of blockchains and cryptocurrency. Making DeFi fast and Efficient. Currently working with Ethereum Foundation on an Inclusion List Design - AUCIL and separately on analyzing Efficacy of Preconfs with Rohan Shrotium.
+      PhD candidate in Computer Science at Duke University. Studying security of blockchains and cryptocurrency. Making DeFi fast and Efficient. Currently working with Ethereum Foundation on an Inclusion List Design - AUCIL and separately on analyzing Efficacy of Preconfs.
     # button:
     #   text: 'Read Thesis - Incomplete'
     #   url: 'https://example.com'
@@ -113,4 +113,4 @@ languages:
 
 ## About Me
 
-I am a fourth-year PhD candidate in the Computer Science Department at Duke University. I graduated with an integrated Dual Degree (Bachelor + Master of Technology) in Computer Science and Textile Technology from the Indian Institute of Technology, Delhi. My PhD research focuses on creating mechanisms for Decentralized Finance applications that are incentive compatible in presence of strategic players. Currently, I am working with Ethereum Foundation on an Inclusion List Design - AUCIL and separately on analyzing Efficacy of Preconfs with Rohan Shrotium. I am also trying to learn more about algorithmic game theory, and the wonderful applications that the intersection of privacy and game theory can bring to the DeFi space. Apart from research, I like everything that fantastical (Books, TV Shows & Anime). I am a Truthwatcher, though look up to Windrunners the most!
+I am a fourth-year PhD candidate in the Computer Science Department at Duke University. I graduated with an integrated Dual Degree (Bachelor + Master of Technology) in Computer Science and Textile Technology from the Indian Institute of Technology, Delhi. My PhD research focuses on creating mechanisms for Decentralized Finance applications that are incentive compatible in presence of strategic players. Currently, I am working with Ethereum Foundation on an Inclusion List Design - AUCIL and separately on analyzing Efficacy of Preconfs. I am also trying to learn more about algorithmic game theory, and the wonderful applications that the intersection of privacy and game theory can bring to the DeFi space. Apart from research, I like everything that fantastical (Books, TV Shows & Anime). I am a Truthwatcher, though look up to Windrunners the most!

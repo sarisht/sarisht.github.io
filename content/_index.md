@@ -35,10 +35,8 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        My research aims to understand and mitigate the security challenges introduced by strategic privileged players (e.g., block proposers) in decentralized systems. My projects explore both application-specific solutions for incentive manipulation and application-agnostic schemes for Miner’s Extractable Value (MEV) reduction. Overall, my goal is to develop principled methods to achieve accountable decentralized protocols, particularly in the presence of adversarial incentive manipulation attacks.
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
-        
         Please reach out to collaborate 😃
     design:
       columns: '1'
