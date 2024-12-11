@@ -50,7 +50,7 @@ interests:
 education:
   - area: PhD Computer Science
     institution: Duke University
-    date_start: 2021-07
+    date_start: 2021-07-01
     date_end: Present
     summary: |
       PhD candidate in Computer Science at Duke University. Studying security of blockchains and cryptocurrency. Making DeFi fast and Efficient. Currently working with Ethereum Foundation on an Inclusion List Design - AUCIL and separately on analyzing Efficacy of Preconfs with Rohan Shrotium.
@@ -59,8 +59,8 @@ education:
     #   url: 'https://example.com'
   - area: Integrated M. Tech. in Computer Science and Engineering and B.Tech. in Textile Technology
     institution: Indian Institute of Technology, Delhi
-    date_start: 2014-07
-    date_end: 2019-06
+    date_start: 2014-07-01
+    date_end: 2019-06-01
     summary: |
       GPA: 8.4/10
 work:
@@ -68,8 +68,8 @@ work:
     company_name: Samsung Research Institute, Bangalore, India
     company_url: ''
     company_logo: ''
-    date_start: 2019-07
-    date_end: 2021-06
+    date_start: 2019-07-01
+    date_end: 2021-06-01
     summary: |2-
       Responsibilities include:
       - Worked in the camera systems team at SRIB. 
@@ -77,8 +77,8 @@ work:
     company_name: Flashbots
     company_url: ''
     company_logo: ''
-    date_start: 2023-05
-    date_end: 2020-07
+    date_start: 2023-05-01
+    date_end: 2020-07-01
     summary: |
       Responsibilities include:
       - Proposed and analyzed hints for MEV-Share and their use cases in order to enable easier backrunning-based MEV extractions.
