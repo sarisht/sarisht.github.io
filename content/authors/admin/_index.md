@@ -78,7 +78,7 @@ work:
     company_url: ''
     company_logo: ''
     date_start: 2023-05-01
-    date_end: 2020-07-01
+    date_end: 2023-07-01
     summary: |
       Responsibilities include:
       - Proposed and analyzed hints for MEV-Share and their use cases in order to enable easier backrunning-based MEV extractions.
