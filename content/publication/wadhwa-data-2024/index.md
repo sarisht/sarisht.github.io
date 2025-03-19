@@ -21,7 +21,4 @@ abstract: Order manipulation attacks such as frontrunning and sandwiching have b
 
 tags:
   - Blockchains Security
-
-# Display this page in the Featured widget?
-featured: true
 ---
