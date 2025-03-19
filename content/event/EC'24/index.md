@@ -23,6 +23,8 @@ tags: []
 # Is this a featured talk? (true/false)
 featured: false
 
+{{< youtube w7Ft2ymGmfc >}}
+
 image:
   caption: ''
   focal_point: Right
