@@ -23,6 +23,10 @@ role: PhD Candidate in Security of Blockchains
 organizations:
   - name: Duke University
     url: https://cs.duke.edu/
+  - name: Advised by: Prof. Kartik Nayak
+    url: https://users.cs.duke.edu/~kartik/
+  - name: and Prof. Fan Zhang
+    url: https://www.fanzhang.me/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
