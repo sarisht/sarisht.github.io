@@ -1,5 +1,5 @@
 ---
-title: 'He-htlc: Revisiting incentives in htlc'
+title: 'AUCIL: An Inclusion List Design for Rational Parties'
 authors:
 - Sarisht Wadhwa
 - Julian Ma
