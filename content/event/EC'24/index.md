@@ -23,8 +23,6 @@ tags: []
 # Is this a featured talk? (true/false)
 featured: false
 
-{{< youtube w7Ft2ymGmfc >}}
-
 image:
   caption: ''
   focal_point: Right
@@ -51,4 +49,6 @@ slides: ""
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
+projects:
+  - example
 ---
