@@ -1,13 +1,13 @@
 ---
 title: AnimaguSwap
 
-event: Blockchains and Decentralized Finance Workshop, EC 2024
+event: DeFi Workshop- EC 2024 (Also presented at CCS 2024)
 event_url: https://ec24.theodiamandis.com/
 
 location: Yale University
 
 summary: Talk about a new AMM design - AnimaguSwap
-abstract: 'Part of our latest work on Data Independent Order Policy Enforcement presented at Yale University'
+abstract: 'Part of our latest work on Data Independent Order Policy Enforcement, I talk about a new AMM interface design that relaxes the cryptographic binding property of a transaction to a rational binding property. The resulting design-AnimaguSwap mitigates any sandwich attacks in absence of an off chain collusion between anonymous parties.'
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

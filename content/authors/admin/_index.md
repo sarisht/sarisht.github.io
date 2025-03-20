@@ -61,7 +61,7 @@ education:
     # button:
     #   text: 'Read Thesis - Incomplete'
     #   url: 'https://example.com'
-  - area: Integrated M. Tech. in Computer Science and Engineering and B.Tech.
+  - area: Integrated B. Tech. and M. Tech. in Computer Science and Engineering
     institution: Indian Institute of Technology, Delhi
     date_start: 2014-07-01
     date_end: 2019-06-01
