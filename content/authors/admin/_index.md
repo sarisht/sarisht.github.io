@@ -61,7 +61,7 @@ education:
     # button:
     #   text: 'Read Thesis - Incomplete'
     #   url: 'https://example.com'
-  - area: Integrated M. Tech. in Computer Science and Engineering and B.Tech. in Textile Technology
+  - area: Integrated M. Tech. in Computer Science and Engineering and B.Tech.
     institution: Indian Institute of Technology, Delhi
     date_start: 2014-07-01
     date_end: 2019-06-01
@@ -117,4 +117,4 @@ languages:
 
 ## About Me
 
-I am a fourth-year PhD candidate in the Computer Science Department at Duke University. I graduated with an integrated Dual Degree (Bachelor + Master of Technology) in Computer Science and Textile Technology from the Indian Institute of Technology, Delhi. My PhD research focuses on creating mechanisms for Decentralized Finance applications that are incentive compatible in presence of strategic players. Currently, I am working with Ethereum Foundation on an Inclusion List Design - AUCIL and separately on analyzing Efficacy of Preconfs. I am also trying to learn more about algorithmic game theory, and the wonderful applications that the intersection of privacy and game theory can bring to the DeFi space. Apart from research, I like everything that fantastical (Books, TV Shows & Anime). I am a Truthwatcher, though look up to Windrunners the most!
+I am a fourth-year PhD candidate in the Computer Science Department at Duke University. I graduated with an integrated Dual Degree (Bachelor + Master of Technology) in Computer Science from the Indian Institute of Technology, Delhi. My PhD research focuses on creating mechanisms for Decentralized Finance applications that are incentive compatible in presence of strategic players. Currently, I am working with Ethereum Foundation on an Inclusion List Design - AUCIL and separately on analyzing Efficacy of Preconfs. I am also trying to learn more about algorithmic game theory, and the wonderful applications that the intersection of privacy and game theory can bring to the DeFi space. Apart from research, I like everything that fantastical (Books, TV Shows & Anime). I am a Truthwatcher, though look up to Windrunners the most!
