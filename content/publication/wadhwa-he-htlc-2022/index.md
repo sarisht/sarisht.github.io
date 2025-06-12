@@ -1,5 +1,5 @@
 ---
-title: 'He-htlc: Revisiting incentives in htlc'
+title: 'He-HTLC: Revisiting incentives in HTLC'
 authors:
 - Sarisht Wadhwa
 - Jannis Stoeter
