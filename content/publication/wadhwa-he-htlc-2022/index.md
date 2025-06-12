@@ -9,8 +9,7 @@ date: '2023-01-01'
 publishDate: '2023-02-10T03:25:50.166908Z'
 publication_types:
 - article-journal
-publication: '30th Annual Network and Distributed System Security Symposium, {NDSS}
-                  2023, San Diego, California, USA, February 27 - March 3, 2023'
+publication: '30th Annual Network and Distributed System Security Symposium, NDSS'
 links:
 - name: URL
   url: https://www.ndss-symposium.org/ndss-paper/he-htlc-revisiting-incentives-in-htlc/
