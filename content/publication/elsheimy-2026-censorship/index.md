@@ -10,5 +10,5 @@ date: '2026-01-01'
 publishDate: '2026-02-11T20:20:39.426873Z'
 publication_types:
 - article-journal
-publication: '*Cryptology ePrint Archive*'
+publication: '*Proceedings of the 2026 on ACM SIGSAC Conference on Computer and Communications Security*'
 ---
