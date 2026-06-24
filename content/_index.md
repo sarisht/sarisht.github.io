@@ -32,6 +32,23 @@ sections:
           parallax: false
   - block: markdown
     content:
+      title: '📰 News'
+      subtitle: ''
+      text: |-
+        - **Jun 2026** — Excited to join the University of Michigan as a postdoc, hosted by Prof. Ke Wu.
+        - **Jun 2026** — Joining the Program Committee for USENIX Security 2027.
+        - **Jun 2026** — Talk at IC3 Camp on *Perils of Parallelism*.
+        - **May 2026** — *Perils of Parallelism* accepted at SBC 2026.
+        - **May 2026** — *Perils of Parallelism* accepted at USENIX Security 2026.
+        - **May 2026** — Talk at Designing DeFi.
+        - **Apr 2026** — *Censorship Resistance vs Throughput in Multi-Proposer BFT Protocols* accepted at CCS 2026.
+        - **Dec 2025** — Talk at CCE on *Perils of Parallelism*.
+        - **Nov 2025** — Joining the Program Committee for CCS 2026 and EC 2026.
+        - **Aug 2025** — Talk on *AUCIL* at MEV-SBC 2025.
+    design:
+      columns: '1'
+  - block: markdown
+    content:
       title: '📚 My Research'
       subtitle: ''
       text: |-
