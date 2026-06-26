@@ -58,14 +58,33 @@ sections:
         exclude_featured: false
     design:
       view: citation
+  # Featured talk (pinned to the top, shown first).
   - block: collection
     id: talks
     content:
       title: Recent & Upcoming Talks
+      count: 0
       filters:
         folders:
           - event
+        featured_only: true
     design:
-      view: article-grid
+      view: date-title-summary
       columns: 1
+      spacing:
+        padding: ['6rem', '0', '0.5rem', '0']
+  # Remaining talks (compact, no images).
+  - block: collection
+    id: talks-more
+    content:
+      count: 0
+      filters:
+        folders:
+          - event
+        exclude_featured: true
+    design:
+      view: date-title-summary
+      columns: 1
+      spacing:
+        padding: ['0', '0', '6rem', '0']
 ---

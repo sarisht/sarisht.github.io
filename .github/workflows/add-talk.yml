@@ -114,7 +114,7 @@ jobs:
               yaml.safe_load(content)
               if not content.endswith("\n"):
                   content += "\n"
-              news_text = f"Talk *{title}* at {event}."
+              news_text = f"Presented *{title}* at {event}."
               content += f"  - date: '{date}'\n    text: {json.dumps(news_text, ensure_ascii=False)}\n"
               yaml.safe_load(content)
               open(npath, "w").write(content)
