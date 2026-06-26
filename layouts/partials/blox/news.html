@@ -23,7 +23,9 @@
     <input type="checkbox" id="news-more-cb" class="news-more-cb">
     <ul class="news-list">
       {{ range $news }}
-      <li><strong>{{ dateFormat "Jan 2006" (time .date) }}</strong> — {{ $page.RenderString (dict "display" "inline") .text }}</li>
+      {{ $disp := printf "%v" .date }}
+      {{ if findRE `^[0-9]{4}-[0-9]{2}-[0-9]{2}` $disp }}{{ $disp = dateFormat "Jan 2006" (time .date) }}{{ end }}
+      <li><strong>{{ $disp }}</strong> — {{ $page.RenderString (dict "display" "inline") .text }}</li>
       {{ end }}
     </ul>
     {{ if gt (len $news) $count }}<label for="news-more-cb" class="news-more-btn">Load more &#9662;</label>{{ end }}

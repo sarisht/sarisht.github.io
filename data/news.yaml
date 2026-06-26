@@ -19,5 +19,13 @@ items:
     text: "Talk at CCE on *Perils of Parallelism*."
   - date: '2025-11-15'
     text: "Joining the Program Committees for CCS 2026 and EC 2026."
-  - date: '2025-08-7'
+  - date: '2025-08-07'
     text: "Talk on *AUCIL* at MEV-SBC 2025."
+  - date: '2026-04-20'
+    text: "Talk at the University of Michigan on *Data Independent Order Policy Enforcement*."
+  - date: '2026-04-15'
+    text: "Talk at Yale Applied Cryptography Lab on *Perils of Parallelism*."
+  - date: '2025-07-15'
+    text: "Won first prize (among eight projects) at the IC3 Summer Camp 2025."
+  - date: '2024-06-15'
+    text: "Received an Ethereum Research Grant to improve Ethereum's censorship resistance."
