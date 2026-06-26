@@ -17,7 +17,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: https://users.cs.duke.edu/~sw485/Sarisht_resume.pdf
+        url: uploads/resume.pdf
     design:
       css_class: dark
       background:
@@ -30,22 +30,30 @@ sections:
           size: cover
           position: center
           parallax: false
-  - block: markdown
+  - block: collection
+    id: news
     content:
       title: '📰 News'
-      subtitle: ''
-      text: |-
-        - **Jun 2026** — Excited to join the University of Michigan as a postdoc, hosted by Prof. Ke Wu.
-        - **Jun 2026** — Joining the Program Committee for USENIX Security 2027.
-        - **Jun 2026** — Talk at IC3 Camp on *Perils of Parallelism*.
-        - **May 2026** — Graduated and received my PhD! Deeply grateful to my advisors Prof. Kartik Nayak and Prof. Fan Zhang for their invaluable mentorship, guidance, and unwavering support throughout this journey.
-        - **May 2026** — *Perils of Parallelism* accepted at SBC 2026.
-        - **May 2026** — *Perils of Parallelism* accepted at USENIX Security 2026.
-        - **May 2026** — Talk at Designing DeFi.
-
-        [See all news →](news/)
+      text: ''
+      count: 7
+      filters:
+        folders:
+          - news
+        exclude_future: false
+        exclude_past: false
+      offset: 0
+      order: desc
+    design:
+      view: date-title-summary
+      spacing:
+        padding: [0, 0, 0, 0]
+  - block: markdown
+    content:
+      text: '[See all news →](news/)'
     design:
       columns: '1'
+      spacing:
+        padding: [0, 0, 0, 0]
   - block: markdown
     content:
       title: '📚 My Research'
@@ -77,33 +85,4 @@ sections:
     design:
       view: article-grid
       columns: 1
-  # - block: collection
-  #   id: news
-  #   content:
-  #     title: Recent News
-  #     subtitle: ''
-  #     text: ''
-  #     # Page type to display. E.g. post, talk, publication...
-  #     page_type: post
-  #     # Choose how many pages you would like to display (0 = all pages)
-  #     count: 5
-  #     # Filter on criteria
-  #     filters:
-  #       author: ""
-  #       category: ""
-  #       tag: ""
-  #       exclude_featured: false
-  #       exclude_future: false
-  #       exclude_past: false
-  #       publication_type: ""
-  #     # Choose how many pages you would like to offset by
-  #     offset: 0
-  #     # Page order: descending (desc) or ascending (asc) date.
-  #     order: desc
-  #   design:
-  #     # Choose a layout view
-  #     view: date-title-summary
-  #     # Reduce spacing
-  #     spacing:
-  #       padding: [0, 0, 0, 0]
 ---
