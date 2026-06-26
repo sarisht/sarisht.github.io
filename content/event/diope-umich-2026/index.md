@@ -1,10 +1,9 @@
 ---
-title: Data Independent Order Policy Enforcement
+title: Security of Blockchains
 event: University of Michigan (invited visit)
 event_url: ''
 location: ''
-summary: Limitations of and solutions for data-independent (anti-censorship) order
-  policy enforcement.
+summary: Talked about the security of blockchains, based on our papers, Data Independent OPE(CCS 24) and recent work on secure auction platforms. 
 abstract: ''
 date: '2026-04-20T13:00:00Z'
 all_day: false

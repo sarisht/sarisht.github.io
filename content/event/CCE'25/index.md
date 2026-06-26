@@ -6,7 +6,7 @@ event_url: https://columbiacryptoeconomics.org/
 
 location: Columbia University
 
-summary: Lightning talk about Perils of creating a TFM aware of parallel execution
+summary: Talked about Perils of creating a TFM aware of parallel execution
 abstract: ''
 
 # Talk start and end times.

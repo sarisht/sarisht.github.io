@@ -3,8 +3,7 @@ title: Data Independent Order Policy Enforcement
 event: Yale Security Group
 event_url: ''
 location: ''
-summary: Limitations of and solutions for data-independent (anti-censorship) order
-  policy enforcement.
+summary: Talk about our recent work on Data Independent Order Policy Enforecement, primarily focusing on our new solution-AnimaguSwap.
 abstract: ''
 date: '2024-07-20T13:00:00Z'
 all_day: false

@@ -1,10 +1,9 @@
 ---
-title: Data Independent Order Policy Enforcement
+title: AnimaguSwap
 event: Duke Patent Office Visit Day
 event_url: ''
 location: ''
-summary: Limitations of and solutions for data-independent (anti-censorship) order
-  policy enforcement.
+summary: Presented a solution for data-independent order policy enforcement using game theory based on our paper- Data Independent Order Policy Enforcement.
 abstract: ''
 date: '2024-06-15T13:00:00Z'
 all_day: false
