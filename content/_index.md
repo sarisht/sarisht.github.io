@@ -30,36 +30,11 @@ sections:
           size: cover
           position: center
           parallax: false
-  - block: markdown
+  - block: news
     id: news
     content:
       title: '📰 News'
-      subtitle: ''
-      text: |-
-        <style>
-        #news .news-more-cb{display:none;}
-        #news ul li:nth-child(n+8){display:none;}
-        #news .news-more-cb:checked ~ ul li{display:list-item;}
-        #news .news-more-cb:checked ~ .news-more-btn{display:none;}
-        #news .news-more-btn{display:inline-block;margin-top:0.75rem;cursor:pointer;color:#2563eb;font-weight:600;}
-        #news .news-more-btn:hover{text-decoration:underline;}
-        </style>
-        <input type="checkbox" id="news-more-cb" class="news-more-cb">
-
-        - **Jun 2026** — Excited to join the University of Michigan as a postdoc, hosted by Prof. Ke Wu.
-        - **Jun 2026** — Joining the Program Committee for USENIX Security 2027.
-        - **Jun 2026** — Talk at IC3 Camp on *Perils of Parallelism*.
-        - **May 2026** — Graduated and received my PhD! Deeply grateful to my advisors Prof. Kartik Nayak and Prof. Fan Zhang for their invaluable mentorship, guidance, and unwavering support throughout this journey.
-        - **May 2026** — *Perils of Parallelism* accepted at SBC 2026.
-        - **May 2026** — *Perils of Parallelism* accepted at USENIX Security 2026.
-        - **May 2026** — Talk at Designing DeFi.
-        - **Apr 2026** — *Censorship Resistance vs Throughput in Multi-Proposer BFT Protocols* accepted at CCS 2026.
-        - **Mar 2026** — Defended my PhD thesis.
-        - **Dec 2025** — Talk at CCE on *Perils of Parallelism*.
-        - **Nov 2025** — Joining the Program Committees for CCS 2026 and EC 2026.
-        - **Aug 2025** — Talk on *AUCIL* at MEV-SBC 2025.
-
-        <label for="news-more-cb" class="news-more-btn">Load more ▾</label>
+      count: 7
     design:
       columns: '1'
   - block: markdown

@@ -1,0 +1,28 @@
+# Single source of truth for the homepage News section.
+# Editable via the Decap CMS admin (News collection) or by hand.
+# Newest items are sorted to the top automatically by date.
+items:
+  - date: '2026-06-15'
+    text: "Excited to join the University of Michigan as a postdoc, hosted by Prof. Ke Wu."
+  - date: '2026-06-10'
+    text: "Joining the Program Committee for USENIX Security 2027."
+  - date: '2026-06-05'
+    text: "Talk at IC3 Camp on *Perils of Parallelism*."
+  - date: '2026-05-15'
+    text: "Graduated and received my PhD! Deeply grateful to my advisors Prof. Kartik Nayak and Prof. Fan Zhang for their invaluable mentorship, guidance, and unwavering support throughout this journey."
+  - date: '2026-05-12'
+    text: "*Perils of Parallelism* accepted at SBC 2026."
+  - date: '2026-05-08'
+    text: "*Perils of Parallelism* accepted at USENIX Security 2026."
+  - date: '2026-05-05'
+    text: "Talk at Designing DeFi."
+  - date: '2026-04-15'
+    text: "*Censorship Resistance vs Throughput in Multi-Proposer BFT Protocols* accepted at CCS 2026."
+  - date: '2026-03-15'
+    text: "Defended my PhD thesis."
+  - date: '2025-12-10'
+    text: "Talk at CCE on *Perils of Parallelism*."
+  - date: '2025-11-15'
+    text: "Joining the Program Committees for CCS 2026 and EC 2026."
+  - date: '2025-08-15'
+    text: "Talk on *AUCIL* at MEV-SBC 2025."

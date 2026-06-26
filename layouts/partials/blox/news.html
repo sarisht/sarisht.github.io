@@ -1,0 +1,31 @@
+{{/* Custom Hugo Blox: News */}}
+{{/* Renders data/news.yaml (newest first) with a CSS-only "Load more" toggle. */}}
+{{/* Single source of truth = data/news.yaml (also edited via the Decap CMS News collection). */}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $id := $block.id | default "news" }}
+{{ $count := int ($block.content.count | default 7) }}
+{{ $title := $block.content.title | default "News" | emojify }}
+{{ $news := sort (site.Data.news.items | default slice) "date" "desc" }}
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6">
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">{{ $title }}</div>
+  <div class="prose prose-slate lg:prose-xl dark:prose-invert max-w-prose w-full">
+    <style>
+    #{{ $id }} .news-more-cb{display:none;}
+    #{{ $id }} ul.news-list li:nth-child(n+{{ add $count 1 }}){display:none;}
+    #{{ $id }} .news-more-cb:checked ~ ul.news-list li{display:list-item;}
+    #{{ $id }} .news-more-cb:checked ~ .news-more-btn{display:none;}
+    #{{ $id }} .news-more-btn{display:inline-block;margin-top:0.75rem;cursor:pointer;color:#2563eb;font-weight:600;}
+    #{{ $id }} .news-more-btn:hover{text-decoration:underline;}
+    </style>
+    <input type="checkbox" id="news-more-cb" class="news-more-cb">
+    <ul class="news-list">
+      {{ range $news }}
+      <li><strong>{{ dateFormat "Jan 2006" (time .date) }}</strong> — {{ $page.RenderString (dict "display" "inline") .text }}</li>
+      {{ end }}
+    </ul>
+    {{ if gt (len $news) $count }}<label for="news-more-cb" class="news-more-btn">Load more &#9662;</label>{{ end }}
+  </div>
+</div>
