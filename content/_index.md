@@ -30,30 +30,22 @@ sections:
           size: cover
           position: center
           parallax: false
-  - block: collection
-    id: news
-    content:
-      title: '📰 News'
-      text: ''
-      count: 7
-      filters:
-        folders:
-          - news
-        exclude_future: false
-        exclude_past: false
-      offset: 0
-      order: desc
-    design:
-      view: date-title-summary
-      spacing:
-        padding: [0, 0, 0, 0]
   - block: markdown
     content:
-      text: '[See all news →](news/)'
+      title: '📰 News'
+      subtitle: ''
+      text: |-
+        - **Jun 2026** — Excited to join the University of Michigan as a postdoc, hosted by Prof. Ke Wu.
+        - **Jun 2026** — Joining the Program Committee for USENIX Security 2027.
+        - **Jun 2026** — Talk at IC3 Camp on *Perils of Parallelism*.
+        - **May 2026** — Graduated and received my PhD! Deeply grateful to my advisors Prof. Kartik Nayak and Prof. Fan Zhang for their invaluable mentorship, guidance, and unwavering support throughout this journey.
+        - **May 2026** — *Perils of Parallelism* accepted at SBC 2026.
+        - **May 2026** — *Perils of Parallelism* accepted at USENIX Security 2026.
+        - **May 2026** — Talk at Designing DeFi.
+
+        [See all news →](news/)
     design:
       columns: '1'
-      spacing:
-        padding: [0, 0, 0, 0]
   - block: markdown
     content:
       title: '📚 My Research'
