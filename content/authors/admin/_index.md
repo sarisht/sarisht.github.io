@@ -17,7 +17,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Postdoctoral Researcher | Games in Blockchains
+role: Postdoctoral Researcher | Mechanism Design for Blockchains
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -115,4 +115,4 @@ languages:
 
 ## About Me
 
-I am an incoming postdoctoral researcher at the University of Michigan, hosted by Prof. Ke Wu. Previously, I finisihed my doctorate in Computer Science at Duke University, advised by Prof. Kartik Nayak and Prof. Fan Zhang in May 2026. My research is at the intersection of cryptography, algorithmic game theory, and blockchain systems, with a focus on designing incentive-compatible mechanisms for decentralized applications. I work on problems related to censorship resistance, transaction fee markets, and multi-proposer execution in modern blockchains. My recent projects include an Auction-Based Inclusion List Design (AUCIL), a censorhip-resistant sealed-bid auction platform, a fee-mechanism design which captures the execution uncertainty of transactions, and an analysis of how censorship resistance is necessarily a trade-off with throughput of the system. Broadly, I am motivated by understanding how cryptography and mechanism design can jointly overcome strategic manipulation in DeFi systems. Outside of research, I enjoy fantasy novels and anime, and am learning to play indian flute.
+I am an incoming postdoctoral researcher at the University of Michigan, hosted by Prof. Ke Wu, where I will be researching secure mechanism designs for blockchains and more. Previously, I finisihed my doctorate in Computer Science at Duke University, advised by Prof. Kartik Nayak and Prof. Fan Zhang in May 2026. My research is at the intersection of cryptography, algorithmic game theory, and blockchain systems, with a focus on designing incentive-compatible mechanisms for decentralized applications. I work on problems related to censorship resistance, transaction fee markets, and multi-proposer execution in modern blockchains. My recent projects include an Auction-Based Inclusion List Design (AUCIL), a censorhip-resistant sealed-bid auction platform, a fee-mechanism design which captures the execution uncertainty of transactions, and an analysis of how censorship resistance is necessarily a trade-off with throughput of the system. Broadly, I am motivated by understanding how cryptography and mechanism design can jointly overcome strategic manipulation in DeFi systems. Outside of research, I enjoy fantasy novels and anime, and am learning to play indian flute.
