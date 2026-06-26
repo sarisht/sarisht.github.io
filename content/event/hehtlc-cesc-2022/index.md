@@ -11,7 +11,7 @@ authors:
 - admin
 tags: []
 featured: false
-url_video: ''
+url_video: 'https://youtu.be/O6d0x6NXOig?list=PLS01nW3Rtgop6VBy4Dvhea-hzOR2FAqsy&t=2341'
 url_slides: ''
 url_pdf: ''
 url_code: ''
