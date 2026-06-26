@@ -17,7 +17,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Postdoctoral Researcher studying games induced by blockchains
+role: Postdoctoral Researcher | Games in Blockchains
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
