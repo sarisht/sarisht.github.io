@@ -69,19 +69,36 @@ jobs:
           python3 -m pip install --quiet pyyaml || true
           python3 - <<'PY'
           import os, re, json, yaml
+          from datetime import datetime
 
           def env(k): return os.environ.get(k, "").strip()
 
-          title = env("T_TITLE"); event = env("T_EVENT"); date = env("T_DATE")
+          title = env("T_TITLE"); event = env("T_EVENT")
           featured = env("T_FEATURED") == "true"
           also_news = env("T_ALSO_NEWS") == "true"
+
+          # Normalise the date (zero-pad, accept a few formats) -> YYYY-MM-DD.
+          raw = env("T_DATE"); dt = None
+          for fmt in ("%Y-%m-%d", "%Y/%m/%d", "%m/%d/%Y", "%Y-%m-%d %H:%M"):
+              try: dt = datetime.strptime(raw, fmt); break
+              except ValueError: pass
+          if dt is None:
+              raise SystemExit(f"Could not parse date '{raw}'. Use YYYY-MM-DD.")
+          date = dt.strftime("%Y-%m-%d")
+          date_iso = dt.strftime("%Y-%m-%dT00:00:00Z")
 
           def slugify(s):
               s = re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
               return s or "talk"
 
-          slug = slugify(title)
-          date_iso = f"{date}T00:00:00Z"
+          # Unique slug so two talks with the same title never overwrite each other.
+          base = slugify(title)
+          slug = base
+          if os.path.exists(f"content/event/{slug}"):
+              slug = f"{base}-{date}"
+          n = 2
+          while os.path.exists(f"content/event/{slug}"):
+              slug = f"{base}-{date}-{n}"; n += 1
 
           fm = {
               "title": title,

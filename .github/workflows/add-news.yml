@@ -31,7 +31,15 @@ jobs:
           python3 -m pip install --quiet pyyaml || true
           python3 - <<'PY'
           import os, json, yaml
-          date = os.environ["NEWS_DATE"].strip()
+          from datetime import datetime
+          raw = os.environ["NEWS_DATE"].strip()
+          dt = None
+          for fmt in ("%Y-%m-%d", "%Y/%m/%d", "%m/%d/%Y"):
+              try: dt = datetime.strptime(raw, fmt); break
+              except ValueError: pass
+          if dt is None:
+              raise SystemExit(f"Could not parse date '{raw}'. Use YYYY-MM-DD.")
+          date = dt.strftime("%Y-%m-%d")  # always zero-padded, so the site build never breaks
           text = os.environ["NEWS_TEXT"].strip()
           path = "data/news.yaml"
           content = open(path).read()

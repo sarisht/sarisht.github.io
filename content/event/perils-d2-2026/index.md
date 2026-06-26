@@ -1,11 +1,11 @@
 ---
 title: Perils of Parallelism
-event: Designing DeFi (D2) Workshop 2026
-event_url: ''
-location: ''
-summary: Transaction fee mechanism design under parallel, uncertain execution.
+event: Designing DeFi (D²) Workshop 2026
+event_url: https://designingdefi.substack.com/p/whats-happening-in-defi-microstructure
+location: Columbia University
+summary: Presented Perils of Parallelism at the Designing DeFi (D²) workshop.
 abstract: ''
-date: '2026-05-05T13:00:00Z'
+date: '2026-05-20T00:00:00Z'
 all_day: false
 authors:
 - admin
