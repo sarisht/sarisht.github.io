@@ -58,7 +58,7 @@ sections:
         exclude_featured: false
     design:
       view: citation
-  # Featured talk (pinned to the top, shown first).
+  # Featured talk (pinned to the top, shown with its photo).
   - block: collection
     id: talks
     content:
@@ -69,11 +69,11 @@ sections:
           - event
         featured_only: true
     design:
-      view: date-title-summary
+      view: article-grid
       columns: 1
       spacing:
         padding: ['6rem', '0', '0.5rem', '0']
-  # Remaining talks (compact, no images).
+  # All talks (compact, no images) — includes the featured one again.
   - block: collection
     id: talks-more
     content:
@@ -81,7 +81,6 @@ sections:
       filters:
         folders:
           - event
-        exclude_featured: true
     design:
       view: date-title-summary
       columns: 1
