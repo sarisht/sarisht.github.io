@@ -31,6 +31,7 @@ sections:
           position: center
           parallax: false
   - block: markdown
+    id: news
     content:
       title: '📰 News'
       subtitle: ''
@@ -42,8 +43,11 @@ sections:
         - **May 2026** — *Perils of Parallelism* accepted at SBC 2026.
         - **May 2026** — *Perils of Parallelism* accepted at USENIX Security 2026.
         - **May 2026** — Talk at Designing DeFi.
-
-        [See all news →](news/)
+        - **Apr 2026** — *Censorship Resistance vs Throughput in Multi-Proposer BFT Protocols* accepted at CCS 2026.
+        - **Mar 2026** — Defended my PhD thesis.
+        - **Dec 2025** — Talk at CCE on *Perils of Parallelism*.
+        - **Nov 2025** — Joining the Program Committees for CCS 2026 and EC 2026.
+        - **Aug 2025** — Talk on *AUCIL* at MEV-SBC 2025.
     design:
       columns: '1'
   - block: markdown
