@@ -1,0 +1,145 @@
+name: Add Talk
+
+# Click "Run workflow", fill the form, and this opens a PR adding a talk under
+# content/event/<slug>/index.md (optionally also a matching news item).
+# Merge the PR to publish. No server required.
+# Note: workflow_dispatch allows at most 10 inputs; abstract/tags/pdf/code can be
+# added afterwards by editing the generated file.
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: "Talk title"
+        required: true
+      event:
+        description: "Event / venue (e.g. USENIX Security 2026)"
+        required: true
+      date:
+        description: "Date (YYYY-MM-DD)"
+        required: true
+      summary:
+        description: "One-line summary"
+        required: false
+      location:
+        description: "Location (optional)"
+        required: false
+      event_url:
+        description: "Event URL (optional)"
+        required: false
+      video_url:
+        description: "Video URL (optional)"
+        required: false
+      slides_url:
+        description: "Slides URL (optional)"
+        required: false
+      featured:
+        description: "Featured talk?"
+        type: boolean
+        default: false
+      also_add_news:
+        description: "Also add a news item for this talk?"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  add-talk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create talk (and optional news item)
+        id: gen
+        env:
+          T_TITLE: ${{ inputs.title }}
+          T_EVENT: ${{ inputs.event }}
+          T_DATE: ${{ inputs.date }}
+          T_SUMMARY: ${{ inputs.summary }}
+          T_LOCATION: ${{ inputs.location }}
+          T_EVENT_URL: ${{ inputs.event_url }}
+          T_VIDEO_URL: ${{ inputs.video_url }}
+          T_SLIDES_URL: ${{ inputs.slides_url }}
+          T_FEATURED: ${{ inputs.featured }}
+          T_ALSO_NEWS: ${{ inputs.also_add_news }}
+        run: |
+          python3 -m pip install --quiet pyyaml || true
+          python3 - <<'PY'
+          import os, re, json, yaml
+
+          def env(k): return os.environ.get(k, "").strip()
+
+          title = env("T_TITLE"); event = env("T_EVENT"); date = env("T_DATE")
+          featured = env("T_FEATURED") == "true"
+          also_news = env("T_ALSO_NEWS") == "true"
+
+          def slugify(s):
+              s = re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+              return s or "talk"
+
+          slug = slugify(title)
+          date_iso = f"{date}T00:00:00Z"
+
+          fm = {
+              "title": title,
+              "event": event,
+              "event_url": env("T_EVENT_URL"),
+              "location": env("T_LOCATION"),
+              "summary": env("T_SUMMARY"),
+              "abstract": "",
+              "date": date_iso,
+              "all_day": False,
+              "authors": ["admin"],
+              "tags": [],
+              "featured": featured,
+              "url_video": env("T_VIDEO_URL"),
+              "url_slides": env("T_SLIDES_URL"),
+              "url_pdf": "",
+              "url_code": "",
+          }
+          body = "---\n" + yaml.safe_dump(fm, sort_keys=False, allow_unicode=True, default_flow_style=False) + "---\n"
+
+          d = f"content/event/{slug}"
+          os.makedirs(d, exist_ok=True)
+          path = f"{d}/index.md"
+          open(path, "w").write(body)
+          print("Wrote", path)
+
+          if also_news:
+              npath = "data/news.yaml"
+              content = open(npath).read()
+              yaml.safe_load(content)
+              if not content.endswith("\n"):
+                  content += "\n"
+              news_text = f"Talk *{title}* at {event}."
+              content += f"  - date: '{date}'\n    text: {json.dumps(news_text, ensure_ascii=False)}\n"
+              yaml.safe_load(content)
+              open(npath, "w").write(content)
+              print("Added news:", news_text)
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"slug={slug}\n")
+          PY
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "talk: add ${{ inputs.title }}"
+          title: "Add talk: ${{ inputs.title }}"
+          body: |
+            Adds a talk via the **Add Talk** workflow.
+
+            - **title:** ${{ inputs.title }}
+            - **event:** ${{ inputs.event }}
+            - **date:** ${{ inputs.date }}
+            - **also added news item:** ${{ inputs.also_add_news }}
+
+            File: `content/event/${{ steps.gen.outputs.slug }}/index.md`
+
+            Review the diff and merge to publish.
+          branch: add-talk-${{ github.run_id }}
+          delete-branch: true
+          labels: content
