@@ -1,0 +1,37 @@
+<!-- On a talk/page that has BOTH a featured image and a video link, make the
+     image clickable straight to the video. Pure progressive enhancement: if
+     either piece is missing it does nothing. -->
+<script>
+(function () {
+  function wire() {
+    var img = document.querySelector('.featured-image-wrapper img.featured-image')
+           || document.querySelector('img.featured-image');
+    if (!img) return;
+    var link = document.querySelector('a.hb-attachment-link[href*="youtu"]')
+            || document.querySelector('a[href*="youtu.be"], a[href*="youtube.com/watch"]');
+    if (!link) return;
+    var href = link.getAttribute('href');
+    if (!href) return;
+    var a = img.closest('a');
+    if (a) {
+      a.setAttribute('href', href);
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener');
+    } else {
+      a = document.createElement('a');
+      a.setAttribute('href', href);
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener');
+      a.setAttribute('title', 'Watch the talk');
+      img.parentNode.insertBefore(a, img);
+      a.appendChild(img);
+    }
+    img.style.cursor = 'pointer';
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wire);
+  } else {
+    wire();
+  }
+})();
+</script>
