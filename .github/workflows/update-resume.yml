@@ -1,0 +1,65 @@
+name: Update Resume
+
+# Click "Run workflow", give a URL to the new resume PDF, and this downloads it
+# to static/uploads/resume.pdf and opens a PR. Merge to publish.
+#
+# Why a URL and not a file upload? GitHub's "Run workflow" form only accepts
+# text, not file uploads. So host the PDF somewhere public (your Duke page is the
+# default) and paste the link — or, for a one-off local file, just drag-and-drop
+# it onto static/uploads/resume.pdf via github.com ("Add file -> Upload files").
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "URL of the new resume PDF"
+        required: true
+        default: "https://users.cs.duke.edu/~sw485/Sarisht_resume.pdf"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-resume:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download and validate the PDF
+        env:
+          RESUME_URL: ${{ inputs.url }}
+        run: |
+          mkdir -p static/uploads
+          tmp="$(mktemp)"
+          code="$(curl -sSL -A 'Mozilla/5.0' -w '%{http_code}' -o "$tmp" "$RESUME_URL" || echo 000)"
+          echo "HTTP status: $code"
+          if [ "$code" != "200" ]; then
+            echo "::error::Download failed (HTTP $code) from $RESUME_URL"; exit 1
+          fi
+          if [ "$(head -c 4 "$tmp")" != "%PDF" ]; then
+            echo "::error::Downloaded file is not a PDF (no %PDF header). Check the URL points directly at a PDF."; exit 1
+          fi
+          size="$(wc -c < "$tmp")"
+          if [ "$size" -lt 1000 ]; then
+            echo "::error::File is only $size bytes — looks wrong."; exit 1
+          fi
+          mv "$tmp" static/uploads/resume.pdf
+          echo "Saved static/uploads/resume.pdf ($size bytes)"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "resume: update from ${{ inputs.url }}"
+          title: "Update resume"
+          body: |
+            Updates `static/uploads/resume.pdf` (served at `/uploads/resume.pdf`,
+            which the homepage "Download CV" button links to).
+
+            Source: ${{ inputs.url }}
+
+            Review and merge to publish.
+          branch: update-resume-${{ github.run_id }}
+          delete-branch: true
+          labels: content
+          add-paths: static/uploads/resume.pdf
