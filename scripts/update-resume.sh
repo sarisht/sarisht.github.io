@@ -23,6 +23,11 @@ OUT="$REPO_ROOT/static/uploads/resume.pdf"
 command -v latexmk >/dev/null || { echo "error: latexmk not found — install MacTeX/TeX Live."; exit 1; }
 [ -f "$RESUME_DIR/cv_6.tex" ] || { echo "error: $RESUME_DIR/cv_6.tex not found."; exit 1; }
 
+# Reproducible build: tie the PDF's embedded timestamp to the source's mtime so an
+# unchanged CV recompiles to identical bytes (the guard below then skips no-op runs).
+export FORCE_SOURCE_DATE=1
+export SOURCE_DATE_EPOCH="$(date -r "$RESUME_DIR/cv_6.tex" +%s 2>/dev/null || echo 0)"
+
 echo "==> [1/4] git pull"
 git -C "$REPO_ROOT" pull --ff-only
 
