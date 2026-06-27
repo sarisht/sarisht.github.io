@@ -1,7 +1,7 @@
 ---
 # Leave the homepage title empty to use the site title
 title: "Sarisht Wadhwa"
-date: 2022-10-24
+date: 2026-06-27
 type: landing
 
 design:

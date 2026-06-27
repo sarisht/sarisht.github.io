@@ -10,4 +10,7 @@ publishDate: '2026-02-11T20:20:39.420838Z'
 publication_types:
 - article-journal
 publication: '*Cryptology ePrint Archive*'
+links:
+- name: URL
+  url: https://eprint.iacr.org/2025/2127
 ---

@@ -11,4 +11,7 @@ publishDate: '2026-02-11T20:20:39.426873Z'
 publication_types:
 - article-journal
 publication: '*Proceedings of the ACM SIGSAC Conference on Computer and Communications Security, 2026*'
+links:
+- name: URL
+  url: https://eprint.iacr.org/2026/126
 ---

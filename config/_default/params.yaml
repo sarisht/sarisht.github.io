@@ -15,7 +15,7 @@ marketing:
     local_business_type: ''
     org_name: ''
     description: ''
-    twitter: 'GetResearchDev'
+    twitter: 'SarishtW'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -40,7 +40,7 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Sarisht Wadhwa. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false
