@@ -15,7 +15,14 @@ set -euo pipefail
 # Ensure a macOS MacTeX/TeX Live install is on PATH (no-op if already there).
 export PATH="/Library/TeX/texbin:$PATH"
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Resolve the real script location even when invoked through a symlink.
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do
+  DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
+  SOURCE="$(readlink "$SOURCE")"
+  [ "${SOURCE#/}" = "$SOURCE" ] && SOURCE="$DIR/$SOURCE"
+done
+SCRIPT_DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 RESUME_DIR="$REPO_ROOT/Sarisht-Resume"
 OUT="$REPO_ROOT/static/uploads/resume.pdf"
