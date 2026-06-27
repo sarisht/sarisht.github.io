@@ -30,6 +30,7 @@ export SOURCE_DATE_EPOCH="$(date -r "$RESUME_DIR/cv_6.tex" +%s 2>/dev/null || ec
 
 echo "==> [1/4] git pull"
 git -C "$REPO_ROOT" pull --ff-only
+git -C "$RESUME_DIR" pull --ff-only
 
 echo "==> [2/4] compile cv_6.tex"
 ( cd "$RESUME_DIR" && latexmk -pdf -interaction=nonstopmode -halt-on-error cv_6.tex && latexmk -c cv_6.tex )
