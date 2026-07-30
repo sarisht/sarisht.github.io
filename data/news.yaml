@@ -33,3 +33,5 @@ items:
     text: "Joining the Program Committee for USENIX Security 2027"
   - date: '2026-07-28'
     text: "Joining the Program Committee for ACM DeFi Workshop 2026 (https://defiwork.shop/)."
+  - date: '2026-07-20'
+    text: "Our paper \"Censorship Resistance and Throughput with Multiple Concurrent Proposers\" accepted at AFT'26!"
