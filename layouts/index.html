@@ -76,7 +76,10 @@
   </section>
 
   {{/* ---------- Publications ---------- */}}
-  {{- $pubs := (site.GetPage "/publication").Pages.ByDate.Reverse }}
+  {{- /* Newest first by date; a paper's optional `sort_date` (YYYY-MM-DD) overrides its position. */}}
+  {{- $items := slice }}
+  {{- range (site.GetPage "/publication").Pages }}{{ $items = $items | append (dict "key" (.Params.sort_date | default (.Date.Format "2006-01-02")) "page" .) }}{{ end }}
+  {{- $pubs := slice }}{{ range sort $items "key" "desc" }}{{ $pubs = $pubs | append .page }}{{ end }}
   <section id="publications">
     <h2>Publications</h2>
     <p class="legend">* equal contribution</p>
