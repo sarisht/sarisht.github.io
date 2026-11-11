@@ -54,10 +54,10 @@ service:
       - "[USENIX Security 2027](https://www.usenix.org/conference/usenixsecurity27)"
       - "[ACM CCS 2026](https://www.sigsac.org/ccs/CCS2026/organization/prog-committee.html)"
       - "[ACM EC 2026](https://ec26.sigecom.org/committees/program-committee/)"
-      - "[ACM DeFi Workshop 2026](https://defiwork.shop/)"
+      - "[ACM DeFi Workshop 2026](https://defiwork.shop/) (co-located with ACM CCS 2026)"
       - "[CAAW 2026](https://caaw.io/2026/) (co-located with FC 2026)"
       - "[Agentic Markets Workshop at ICML 2024](https://sites.google.com/view/amw-2024/home)"
-      - "[DeFi Workshop 2024](https://defi24.hotcrp.com/users/pc) (co-located with ACM CCS 2024)"
+      - "[ACM DeFi Workshop 2024](https://defi24.hotcrp.com/users/pc) (co-located with ACM CCS 2024)"
   - role: External Reviewer
     items:
       - "IEEE S&P [2024](https://sp2024.ieee-security.org/), [2025](https://sp2025.ieee-security.org/), [2026](https://sp2026.ieee-security.org/)"
