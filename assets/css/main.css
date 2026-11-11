@@ -52,8 +52,8 @@ strong { font-weight: 700; color: var(--strong); }
 .profile { padding-top: 0.6rem; display: flow-root; }
 .profile-card { float: right; width: 150px; margin: 0.35rem 0 0.75rem 1.75rem; text-align: center; }
 .photo { display: block; width: 150px; height: 150px; object-fit: cover; }
-.cv-link { margin: 0.5rem 0 0; font-size: 0.95rem; }
-.icons { margin: 0.35rem 0 0; display: flex; justify-content: center; gap: 0.9rem; }
+.cv-link { margin: 0.45rem 0 0; font-size: 1rem; }
+.icons { margin: 0.3rem 0 0; display: flex; justify-content: center; gap: 0.9rem; }
 .icons a { color: #555; display: inline-flex; }
 .icons a:hover { color: var(--accent); }
 .icons svg { display: block; }
