@@ -1,12 +1,13 @@
 ---
 title: Publications
-cms_exclude: true
-
-# View.
-view: citation
-
-# Optional header image (relative to `static/media/` folder).
-banner:
-  caption: ''
-  image: ''
+# Papers are listed on the homepage only; no per-paper pages are generated.
+build:
+  render: never
+  list: always
+  publishResources: false
+cascade:
+  build:
+    render: never
+    list: always
+    publishResources: false
 ---

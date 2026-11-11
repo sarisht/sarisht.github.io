@@ -1,13 +1,14 @@
 ---
-title: Recent & Upcoming Talks
-cms_exclude: true
-#url: talk
-
-# View
-view: card
-
-# Optional cover image (relative to `assets/media/` folder).
-image:
-  caption: ''
-  filename: ''
+title: Talks
+# Talks are listed on the homepage only; no per-talk pages are generated.
+# Talks with the same `talk_group` are shown together (falls back to `title`).
+build:
+  render: never
+  list: always
+  publishResources: false
+cascade:
+  build:
+    render: never
+    list: always
+    publishResources: false
 ---

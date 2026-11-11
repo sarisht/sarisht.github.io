@@ -1,0 +1,25 @@
+{{- /* One publication. Context: dict "page" <Page> "tag" <venue tag>. */ -}}
+{{- $pg := .page }}{{ $prm := $pg.Params }}
+{{- $notes := $prm.author_notes | default slice }}
+{{- $links := slice }}
+{{- range $prm.links }}{{ if .url }}{{ $links = $links | append (dict "name" .name "url" .url) }}{{ end }}{{ end }}
+{{- with $prm.url_pdf }}{{ $links = $links | append (dict "name" "PDF" "url" .) }}{{ end }}
+{{- with $prm.doi }}{{ $links = $links | append (dict "name" "DOI" "url" (printf "https://doi.org/%s" .)) }}{{ end }}
+{{- with $prm.url_slides }}{{ $links = $links | append (dict "name" "Slides" "url" .) }}{{ end }}
+{{- with $prm.url_video }}{{ $links = $links | append (dict "name" "Video" "url" .) }}{{ end }}
+{{- with $prm.url_code }}{{ $links = $links | append (dict "name" "Code" "url" .) }}{{ end }}
+<li>
+  <span class="venue-tag">{{ .tag }}</span>
+  <div>
+    <p class="paper-title">{{ with index $links 0 }}<a href="{{ .url }}">{{ $pg.Title }}</a>{{ else }}{{ $pg.Title }}{{ end }}</p>
+    <p class="authors"><span class="label">Authors: </span>
+      {{- range $i, $a := $prm.authors }}{{ if $i }}, {{ end }}{{ if eq $a site.Params.name }}<strong>{{ $a }}</strong>{{ else }}{{ $a }}{{ end }}{{ if and (lt $i (len $notes)) (index $notes $i) }}*{{ end }}{{ end -}}
+      {{- if $prm.alphabetical }} <span class="muted">(alphabetical order)</span>{{ end -}}
+    </p>
+    <p class="venue"><span class="label">In: </span>{{ $prm.publication | markdownify }}{{ with $prm.note }}. {{ . | markdownify }}{{ end }}</p>
+    {{- with $links }}
+    <p class="paper-links">{{ range . }}<a class="tag" href="{{ .url }}">{{ .name }}</a> {{ end }}</p>
+    {{- end }}
+    {{- range $prm.awards }}<p class="award">{{ . | markdownify }}</p>{{ end }}
+  </div>
+</li>

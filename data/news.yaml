@@ -10,7 +10,7 @@ items:
   - date: '2026-05-08'
     text: "*Perils of Parallelism* accepted at USENIX Security 2026."
   - date: '2026-05-05'
-    text: "Talked about Perils of Parallelism at the Designing Defi Workshop 2026."
+    text: "Talk on *Perils of Parallelism* at the Designing DeFi (D²) Workshop 2026."
   - date: '2026-04-15'
     text: "*Censorship Resistance vs Throughput in Multi-Proposer BFT Protocols* accepted at CCS 2026."
   - date: '2026-03-19'
@@ -23,15 +23,17 @@ items:
     text: "Talk on *AUCIL* at MEV-SBC 2025."
   - date: '2026-04-20'
     text: "Talk at the University of Michigan on *Data Independent Order Policy Enforcement*."
-  - date: '2026-04-15'
+  - date: '2026-04-10'
     text: "Talk at Yale Applied Cryptography Lab on *Perils of Parallelism*."
   - date: '2025-07-15'
     text: "Won first prize (among eight projects) at the IC3 Summer Camp 2025."
   - date: '2024-06-15'
     text: "Received an Ethereum Research Grant to improve Ethereum's censorship resistance."
   - date: '2026-07-28'
-    text: "Joining the Program Committee for USENIX Security 2027"
+    text: "Joining the Program Committee for USENIX Security 2027."
   - date: '2026-07-28'
-    text: "Joining the Program Committee for ACM DeFi Workshop 2026 (https://defiwork.shop/)."
+    text: "Joining the Program Committee for the [ACM DeFi Workshop 2026](https://defiwork.shop/)."
   - date: '2026-07-20'
-    text: "Our paper \"Censorship Resistance and Throughput with Multiple Concurrent Proposers\" accepted at AFT'26!"
+    text: "*Price of Censorship: Censorship Resistance and Throughput Under Rational Concurrent Proposers* accepted at AFT 2026."
+  - date: '2026-11-10'
+    text: "Joining the Program Committee for [CAAW 2027](https://caaw.io/2027/), the 6th International Cryptoasset Analytics Workshop."

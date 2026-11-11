@@ -1,0 +1,83 @@
+# Positions, education, service, awards and writing shown on the homepage.
+
+positions:
+  - years: 2026–
+    title: Postdoctoral Researcher
+    org: University of Michigan
+    org_url: https://cse.engin.umich.edu/
+    detail: 'Host: [Ke Wu](https://kewucse.engin.umich.edu/)'
+  - years: 2023
+    title: Research Intern
+    org: Flashbots
+    org_url: https://www.flashbots.net/
+    detail: 'With Jonathan Passerat-Palmbach'
+  - years: 2019–2021
+    title: Senior Software Developer
+    org: Samsung Research Institute, Bangalore
+    detail: Camera systems
+
+education:
+  - years: 2021–2026
+    title: Ph.D. in Computer Science
+    org: Duke University
+    org_url: https://cs.duke.edu/
+    detail: 'Advisors: [Kartik Nayak](https://users.cs.duke.edu/~kartik/) and [Fan Zhang](https://www.fanzhang.me/). Thesis: [*Security of Blockchains with Strategic Entities*](https://hdl.handle.net/10161/35224)'
+  - years: 2014–2019
+    title: Dual B.Tech./M.Tech. in Computer Science and Engineering
+    org: Indian Institute of Technology Delhi
+
+teaching:
+  - years: Fall 2024
+    title: Teaching Assistant
+    org: 'COMPSCI 354: Foundations of Blockchains, Duke University'
+    org_url: https://sites.duke.edu/compsci_354_01_f24/
+    detail: 'Instructor: Kartik Nayak'
+  - years: Spring 2024
+    title: Teaching Assistant
+    org: 'COMPSCI 351: Computer Security, Duke University'
+    detail: 'Instructor: Kartik Nayak'
+  - years: Fall 2022
+    title: Teaching Assistant
+    org: 'COMPSCI 590.1: Foundations of Blockchains, Duke University'
+    org_url: https://web.archive.org/web/2023/https://courses.cs.duke.edu/fall22/compsci590.1/
+    detail: 'Instructor: Kartik Nayak'
+  - years: Spring 2022
+    title: Teaching Assistant
+    org: 'COMPSCI 351: Computer Security, Duke University'
+    org_url: https://sakai.duke.edu/portal/site/COMPSCI-351-01-Sp22
+    detail: 'Instructors: Kartik Nayak and Michael Reiter'
+
+service:
+  - role: Program Committee
+    items:
+      - "[CAAW 2027](https://caaw.io/2027/) (co-located with FC 2027)"
+      - "[USENIX Security 2027](https://www.usenix.org/conference/usenixsecurity27)"
+      - "[ACM CCS 2026](https://www.sigsac.org/ccs/CCS2026/organization/prog-committee.html)"
+      - "[ACM EC 2026](https://ec26.sigecom.org/committees/program-committee/)"
+      - "[ACM DeFi Workshop 2026](https://defiwork.shop/)"
+      - "[CAAW 2026](https://caaw.io/2026/) (co-located with FC 2026)"
+      - "[Agentic Markets Workshop at ICML 2024](https://sites.google.com/view/amw-2024/home)"
+      - "[DeFi Workshop 2024](https://defi24.hotcrp.com/users/pc) (co-located with ACM CCS 2024)"
+  - role: External Reviewer
+    items:
+      - "IEEE S&P [2024](https://sp2024.ieee-security.org/), [2025](https://sp2025.ieee-security.org/), [2026](https://sp2026.ieee-security.org/)"
+      - "FC [2025](https://fc25.ifca.ai/), [2026](https://fc26.ifca.ai/)"
+      - "AFT [2022](https://aft.ifca.ai/aft22/), [2026](https://aft.ifca.ai/aft26/)"
+
+awards:
+  - year: 2025
+    text: First prize (of eight projects), IC3 Summer Camp, for an elastic restaking design
+  - year: 2024
+    text: '[Ethereum Foundation Academic Grant](https://blog.ethereum.org/2025/01/17/academic-grants-recipients) (2024 round), *Censorship Resistance for Ethereum*, with Kartik Nayak'
+  - year: 2021
+    text: Samsung Research Excellence Award
+  - year: 2019
+    text: Microsoft Research travel scholarship, ACM SIGMOD
+
+writing:
+  - title: 'AUCIL: An Auction-Based Inclusion List Design for Enhanced Censorship Resistance on Ethereum'
+    venue: ethresear.ch
+    url: https://ethresear.ch/t/aucil-an-auction-based-inclusion-list-design-for-enhanced-censorship-resistance-on-ethereum/20422
+  - title: Block Building is Not Just Knapsack
+    venue: ethresear.ch
+    url: https://ethresear.ch/t/block-building-is-not-just-knapsack/19871

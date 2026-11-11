@@ -10,9 +10,8 @@ date: '2019-06-01'
 publishDate: '2024-12-10T03:25:50.173388Z'
 publication_types:
 - paper-conference
-publication: '*Proceedings of the 2019 International Conference on Management of Data*'
+publication: '*ACM International Conference on Management of Data (SIGMOD 2019)*'
 doi: 10.1145/3299869.3319882
-links:
-- name: URL
-  url: https://dl.acm.org/doi/10.1145/3299869.3319882
+links: []
+publication_short: SIGMOD'19
 ---

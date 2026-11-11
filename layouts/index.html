@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+{{- $p := site.Params }}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ $p.name }}</title>
+  <meta name="description" content="{{ $p.description }}">
+  <meta name="author" content="{{ $p.name }}">
+  <link rel="canonical" href="{{ site.BaseURL }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ $p.name }}">
+  <meta property="og:description" content="{{ $p.description }}">
+  <meta property="og:url" content="{{ site.BaseURL }}">
+  <meta property="og:image" content="{{ $p.photo | absURL }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ $p.twitter_handle }}">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="{{ "favicon.png" | relURL }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+  {{- $css := resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  <script type="application/ld+json">
+  {{ dict "@context" "https://schema.org" "@type" "Person" "name" $p.name "jobTitle" $p.role "affiliation" (dict "@type" "Organization" "name" $p.affiliation) "url" site.BaseURL "image" ($p.photo | absURL) | jsonify | safeJS }}
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header wrap">
+  <a class="site-title" href="#top">{{ $p.name }}</a>
+  <nav>
+    <ul>
+      <li><a href="#news">News</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#talks">Talks</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="{{ $p.cv | relURL }}">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main" class="wrap">
+
+  {{/* ---------- Profile ---------- */}}
+  <section id="top" class="profile">
+    <div class="profile-card">
+      <img class="photo" src="{{ $p.photo | relURL }}" alt="Photo of {{ $p.name }}" width="150" height="150">
+      <p class="cv-link"><a href="{{ $p.cv | relURL }}">Curriculum Vitae</a></p>
+      <p class="icons">
+        {{- range $l := $p.links }}<a href="{{ $l.url }}" title="{{ $l.name }}" aria-label="{{ $l.name }}">{{ partial "icon.html" $l.icon }}</a>{{ end -}}
+      </p>
+    </div>
+    {{ .Content }}
+  </section>
+
+  {{/* ---------- News ---------- */}}
+  <section id="news">
+    <h2>News</h2>
+    {{- $news := sort hugo.Data.news.items "date" "desc" }}
+    {{- $n := $p.news_visible | default 8 }}
+    <ul class="rows news">
+      {{- range first $n $news }}{{ partial "news-item.html" . }}{{ end }}
+    </ul>
+    {{- if gt (len $news) $n }}
+    <details class="more">
+      <summary>Older news</summary>
+      <ul class="rows news">
+        {{- range after $n $news }}{{ partial "news-item.html" . }}{{ end }}
+      </ul>
+    </details>
+    {{- end }}
+  </section>
+
+  {{/* ---------- Publications ---------- */}}
+  {{- $pubs := (site.GetPage "/publication").Pages.ByDate.Reverse }}
+  <section id="publications">
+    <h2>Publications</h2>
+    <p class="legend">* equal contribution</p>
+    <ol class="rows papers" reversed>
+      {{- range $pubs }}{{ partial "paper.html" (dict "page" . "tag" (.Params.publication_short | default (.Date.Format "2006"))) }}{{ end }}
+    </ol>
+  </section>
+
+  {{/* ---------- Talks (grouped by paper) ---------- */}}
+  {{- $events := (site.GetPage "/event").Pages.ByDate.Reverse }}
+  {{- $groups := slice }}
+  {{- range $events }}{{ $g := .Params.talk_group | default .Title }}{{ if not (in $groups $g) }}{{ $groups = $groups | append $g }}{{ end }}{{ end }}
+  <section id="talks">
+    <h2>Talks</h2>
+    <ul class="talks">
+      {{- range $g := $groups }}
+      <li>
+        <p class="talk-title">{{ $g }}</p>
+        <ul class="venues">
+          {{- range $events }}{{ if eq (.Params.talk_group | default .Title) $g }}
+          <li>
+            <span class="when">{{ .Date.Format "Jan 2006" }}</span>
+            <span>
+              {{- if .Params.event_url }}<a href="{{ .Params.event_url }}">{{ .Params.event | markdownify }}</a>{{ else }}{{ .Params.event | markdownify }}{{ end -}}
+              {{- with .Params.url_video }} <a class="tag" href="{{ . }}">video</a>{{ end -}}
+              {{- with .Params.url_slides }} <a class="tag" href="{{ . }}">slides</a>{{ end -}}
+            </span>
+          </li>
+          {{- end }}{{ end }}
+        </ul>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+
+  {{/* ---------- Service ---------- */}}
+  <section id="service">
+    <h2>Service</h2>
+    {{- range hugo.Data.cv.service }}
+    <h3>{{ .role }}</h3>
+    <ul class="plain">
+      {{- range .items }}<li>{{ . | markdownify }}</li>{{ end }}
+    </ul>
+    {{- end }}
+  </section>
+
+  {{/* ---------- Experience ---------- */}}
+  <section id="experience">
+    <h2>Experience</h2>
+    <h3>Positions</h3>
+    <ul class="rows">{{ range hugo.Data.cv.positions }}{{ partial "cv-item.html" . }}{{ end }}</ul>
+    <h3>Education</h3>
+    <ul class="rows">{{ range hugo.Data.cv.education }}{{ partial "cv-item.html" . }}{{ end }}</ul>
+    {{- with hugo.Data.cv.teaching }}
+    <h3>Teaching</h3>
+    <ul class="rows">{{ range . }}{{ partial "cv-item.html" . }}{{ end }}</ul>
+    {{- end }}
+    <h3>Grants and Awards</h3>
+    <ul class="rows">
+      {{- range hugo.Data.cv.awards }}
+      <li><span class="when">{{ .year }}</span><span>{{ .text | markdownify }}</span></li>
+      {{- end }}
+    </ul>
+    {{- with hugo.Data.cv.writing }}
+    <h3>Writing</h3>
+    <ul class="plain">
+      {{- range . }}<li><a href="{{ .url }}">{{ .title }}</a> <span class="muted">({{ .venue }})</span></li>{{ end }}
+    </ul>
+    {{- end }}
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>© {{ now.Year }} {{ $p.name }} · Last updated {{ now.Format "January 2006" }}</p>
+</footer>
+</body>
+</html>

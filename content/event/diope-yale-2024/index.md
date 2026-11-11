@@ -15,4 +15,5 @@ url_video: ''
 url_slides: ''
 url_pdf: ''
 url_code: ''
+talk_group: Data Independent Order Policy Enforcement
 ---

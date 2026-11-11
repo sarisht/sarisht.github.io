@@ -1,1 +1,5 @@
 Sarisht-Resume/
+public/
+resources/
+.hugo_build.lock
+.DS_Store

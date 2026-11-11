@@ -11,8 +11,9 @@ authors:
 - admin
 tags: []
 featured: false
-url_video: 'https://www.youtube.com/watch?v=bMVYRp5bTVk'
+url_video: https://www.youtube.com/watch?v=bMVYRp5bTVk
 url_slides: ''
 url_pdf: ''
 url_code: ''
+talk_group: 'He-HTLC: Revisiting Incentives in HTLC'
 ---

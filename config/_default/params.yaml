@@ -1,60 +1,28 @@
-# SITE SETUP
-# Guide: https://docs.hugoblox.com/tutorial/
-# Documentation: https://docs.hugoblox.com/
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
+# Profile shown at the top of the homepage.
+name: Sarisht Wadhwa
+role: Postdoctoral Researcher
+affiliation: University of Michigan
+affiliation_url: https://cse.engin.umich.edu/
+description: >-
+  Sarisht Wadhwa is a postdoctoral researcher at the University of Michigan
+  working on the security and mechanism design of blockchains.
+photo: images/sarisht.jpg
+email: wsarisht@umich.edu
+cv: uploads/resume.pdf
+calendar: https://calendar.app.google/s9joBCUTPBziJdt1A
+twitter_handle: SarishtW
 
-# Appearance
-appearance:
-  mode: system
-  color: emerald
+# Icon links under the photo (icon: scholar | x | linkedin; see layouts/partials/icon.html).
+links:
+  - name: Google Scholar
+    icon: scholar
+    url: https://scholar.google.com/citations?hl=en&user=Pb7IpLcAAAAJ
+  - name: X
+    icon: x
+    url: https://x.com/SarishtW
+  - name: LinkedIn
+    icon: linkedin
+    url: https://www.linkedin.com/in/sarisht-wadhwa/
 
-# SEO
-marketing:
-  seo:
-    site_type: Person
-    local_business_type: ''
-    org_name: ''
-    description: ''
-    twitter: 'SarishtW'
-  analytics:
-    google_analytics: ''
-    baidu_tongji: ''
-    plausible: ''
-    fathom: ''
-    pirsch: ''
-  verification:
-    google: ''
-    baidu: ''
-
-# Site header
-header:
-  navbar:
-    enable: true
-    blox: "navbar"
-    fixed_to_top: true
-    show_search: true
-    show_theme_chooser: true
-    logo:
-      text: "Sarisht Wadhwa"
-
-# Site footer
-footer:
-  copyright:
-    notice: '© {year} Sarisht Wadhwa. This work is licensed under {license}'
-    license:
-      enable: true
-      allow_derivatives: false
-      share_alike: true
-      allow_commercial: false
-
-# Localization
-locale:
-  date_format: 'Jan 2, 2006'
-  time_format: '3:04 PM'
-
-# Site features
-features:
-  math:
-    enable: false
-  privacy_pack:
-    enable: false
+# Number of news items shown before the "Older news" toggle.
+news_visible: 8

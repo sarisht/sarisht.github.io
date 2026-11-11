@@ -1,0 +1,4 @@
+<li>
+  <span class="when">{{ .years }}</span>
+  <span><strong>{{ .title }}</strong>, {{ if .org_url }}<a href="{{ .org_url }}">{{ .org }}</a>{{ else }}{{ .org }}{{ end }}{{ with .detail }}<br><span class="muted">{{ . | markdownify }}</span>{{ end }}</span>
+</li>

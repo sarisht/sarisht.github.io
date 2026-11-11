@@ -1,53 +1,25 @@
 ---
 title: AnimaguSwap
-
-event: DeFi Workshop- EC 2024 (Also presented at CCS 2024)
+event: DeFi Workshop at ACM EC 2024
 event_url: https://ec24.theodiamandis.com/
-
 location: Yale University
-
 summary: Talk about a new AMM design, AnimaguSwap — based on our paper Data Independent Order Policy Enforcement.
-abstract: 'Part of our latest work on Data Independent Order Policy Enforcement, I talk about a new AMM interface design that relaxes the cryptographic binding property of a transaction to a rational binding property. The resulting design-AnimaguSwap mitigates any sandwich attacks in absence of an off chain collusion between anonymous parties.'
-
-# Talk start and end times.
-#   End time can optionally be hidden by prefixing the line with `#`.
+abstract: Part of our latest work on Data Independent Order Policy Enforcement, I talk about a new AMM interface design that relaxes the cryptographic binding property of a transaction to a rational binding property. The resulting design-AnimaguSwap mitigates any sandwich attacks in absence of an off chain collusion between anonymous parties.
 date: '2024-07-08T13:00:00Z'
 date_end: '2024-07-08T15:00:00Z'
 all_day: false
-
 authors:
-  - admin
-
+- admin
 tags: []
-
-# Is this a featured talk? (true/false)
 featured: false
-
 image:
   caption: ''
   focal_point: Right
-
-#links:
-#  - icon: twitter
-#    icon_pack: fab
-#    name: Follow
-#    url: https://twitter.com/georgecushen
 url_code: ''
 url_pdf: ''
 url_slides: ''
-url_video: 'https://www.youtube.com/watch?v=G8aDjeS3m6A'
-
-# Markdown Slides (optional).
-#   Associate this talk with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
-slides: ""
-
-# Projects (optional).
-#   Associate this post with one or more of your projects.
-#   Simply enter your project's folder or file name without extension.
-#   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
-#   Otherwise, set `projects = []`.
-projects: ""
+url_video: https://www.youtube.com/watch?v=G8aDjeS3m6A
+slides: ''
+projects: ''
+talk_group: Data Independent Order Policy Enforcement
 ---
