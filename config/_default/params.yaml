@@ -12,7 +12,7 @@ cv: uploads/resume.pdf
 calendar: https://calendar.app.google/s9joBCUTPBziJdt1A
 twitter_handle: SarishtW
 
-# Icon links under the photo (icon: scholar | x | linkedin; see layouts/partials/icon.html).
+# Icon links under the photo (icon: cv | scholar | x | linkedin; see layouts/partials/icon.html).
 links:
   - name: Google Scholar
     icon: scholar

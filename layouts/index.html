@@ -49,8 +49,8 @@
   <section id="top" class="profile">
     <div class="profile-card">
       <img class="photo" src="{{ $p.photo | relURL }}" alt="Photo of {{ $p.name }}" width="150" height="150">
-      <p class="cv-link"><a href="{{ $p.cv | relURL }}">CV</a></p>
       <p class="icons">
+        <a href="{{ $p.cv | relURL }}" title="CV" aria-label="CV">{{ partial "icon.html" "cv" }}</a>
         {{- range $l := $p.links }}<a href="{{ $l.url }}" title="{{ $l.name }}" aria-label="{{ $l.name }}">{{ partial "icon.html" $l.icon }}</a>{{ end -}}
       </p>
     </div>
